@@ -34,9 +34,7 @@ app.post("/creteManyCars", async (req: Request, res: Response) => {
 });
 
 app.get("/", async (req: Request, res: Response) => {
-  const users = await prisma.user.findMany({
-    include: {},
-  });
+  const users = await prisma.user.findMany();
   res.json(users);
 });
 
